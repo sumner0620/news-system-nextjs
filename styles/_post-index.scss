@@ -1,0 +1,65 @@
+@import '../../assets/scss/grid/default/responsive_config';
+@import '../../assets/scss/mixins/utility_mixins';
+@import '../../assets/scss/type/type_styles';
+
+main > section > .container > .news-feed {
+    padding-top: 100px;
+    grid-column-start: 2;
+    grid-column-end: 12;
+
+    .post-listing {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        img {
+            width: 30%;
+            flex-basis: 30%;
+            margin-right: 24px;
+            padding: 16px;
+        }
+
+        aside {
+            width: 70%;
+            flex-basis: 70%;
+
+            time {
+                @include eyebrow;
+            }
+            a {
+                margin-top: 16px;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 54px;
+        }
+
+        @include media-max-width(md) {
+            flex-direction: column;
+            align-items: flex-start;
+
+            img {
+                width: 100%;
+                flex-basis: 100%;
+            }
+            aside {
+                width: 100%;
+                flex-basis: 100%;
+            }
+        }
+        @include media-max-width(sm) {
+            &:not(:last-child) {
+                margin-bottom: 85px;
+            }
+        }
+    }
+
+    .post-pagination {
+        margin-top: 81px;
+
+        ul {
+            justify-content: center;
+        }
+    }
+}

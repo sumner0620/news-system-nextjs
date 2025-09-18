@@ -1,0 +1,75 @@
+@import '../../assets/scss/color_variables';
+@import '../../assets/scss/grid/default/responsive_config';
+@import '../../assets/scss/mixins/utility_mixins';
+
+.single-post {
+    h1.post-title {
+        font-size: 33px;
+        margin-bottom: 51px !important;
+        border-left: 12px solid $color22;
+        padding-left: 18px;
+    }
+    b {
+        display: block;
+        margin-bottom: 12px;
+        margin-top: 15px;
+    }
+    .post-inner-container {
+        margin-top: 45px;
+        grid-column-start: 3;
+        grid-column-end: 11;
+
+        ul[type='disc']:first-of-type {
+            text-align: center;
+        }
+        img {
+            float: left;
+            margin: 21px 21px 12px 0;
+        }
+        time {
+            display: block;
+            margin-bottom: 12px;
+        }
+        .post-intro {
+            margin-bottom: 21px;
+            text-align: center;
+            font-style: italic;
+        }
+        .post-image {
+            margin: 21px 0;
+        }
+        .post-footnote {
+            margin-bottom: 12px;
+        }
+
+        @include media-max-width(sm) {
+            grid-column-start: 1;
+            grid-column-end: end;
+        }
+    }
+    .prntac {
+        margin-bottom: 21px;
+    }
+    .back-link {
+        clear: both;
+        display: block;
+        margin-top: 24px;
+        grid-column-end: auto; // Override grid-column-end to take up only necessary width
+        white-space: nowrap;
+
+        &--pressrelease {
+            border-bottom: 1px solid $color5;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 50px;
+            padding-bottom: 16px;
+            width: 100%;
+
+            a {
+                margin-left: 3px;
+            }
+        }
+    }
+}
