@@ -61,7 +61,7 @@ const PostIndex = async ({ params }: { params: { page: string } }) => {
                                         <img
                                             src={
                                                 findImage(item) ||
-                                                'https://images.ctfassets.net/t21gix3kzulv/3m1hheB7Okv7IdppkEMSxl/b0107620062968f8c479eef7f9f77f53/CTCT_Logo_H_Stack_FC_RGB.svg'
+                                                '[redacted_image_src]'
                                             }
                                             alt={headline}
                                         />
